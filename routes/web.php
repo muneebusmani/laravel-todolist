@@ -13,7 +13,7 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');*/
 Route::redirect('/', '/note')->name('dashboard');
-Route::middleware(['auth', 'verified'])->group(function () {
+Route::middleware(['auth'])->group(function () {
 //Route::get('/note', [NoteController::class, 'index'])->name('note.index');
 //Route::get('/note/create', [NoteController::class, 'create'])->name('note.create');
 //Route::post('/note', [NoteController::class, 'store'])->name('note.store');
